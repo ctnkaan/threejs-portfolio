@@ -27,9 +27,6 @@ const geometry = new THREE.SphereGeometry(10,30);
 //const material = new THREE.MeshStandardMaterial({ color: 0xEE9B14});
 const torus = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({ map: skintorus }));
 
-
-const newTorus = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({ map: skintorus }));
-
 scene.add(torus);
 
 
@@ -51,9 +48,9 @@ scene.add(pointLight, ambientLight);
 function animate() {
     requestAnimationFrame(animate);
 
-    torus.rotation.x += 0.01;
+    //torus.rotation.x += 0.01;
     torus.rotation.y += 0.005;
-    torus.rotation.z += 0.01;
+    //torus.rotation.z += 0.01;
 
     moon.rotation.x += 0.005;
 
