@@ -21,10 +21,10 @@ renderer.render(scene, camera);
 
 //Circle Object
 
-const skintorus = new THREE.TextureLoader().load("ring1.jpg");
+const skintorus = new THREE.TextureLoader().load("earth.jpg");
 
-const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
-const material = new THREE.MeshStandardMaterial({ color: 0xEE9B14});
+const geometry = new THREE.SphereGeometry(10,30);
+//const material = new THREE.MeshStandardMaterial({ color: 0xEE9B14});
 const torus = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({ map: skintorus }));
 
 
@@ -73,7 +73,7 @@ function addStar() {
 
 
 //Background
-Array(200).fill().forEach(addStar);
+Array(300).fill().forEach(addStar);
 
 const spaceTexture = new THREE.TextureLoader().load("space.jpg");
 scene.background = spaceTexture;
